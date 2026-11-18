@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulk &amp; Trade Quotation — D.Tiles Studio</title>
+<meta name="description" content="Request a bulk or wholesale tile quotation from D.Tiles Studio for residential, commercial, contractor and builder projects. GST invoicing and NCR delivery.">
+<meta name="theme-color" content="#FAF7F2">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="quote" data-nav="quote">
+<main id="main">
+  <section class="page-title">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="shop.html">Studio Services</a><span class="sep">/</span><span class="cur">Architect &amp; Trade Desk</span></nav>
+      <span class="eyebrow terra"><span class="dash"></span>Bulk • Wholesale • Project Supply</span>
+      <h1>Request a <em class="it">quotation</em></h1>
+      <p class="lead">For residences, commercial fit-outs, contractors and builders. Share your requirement and our trade desk replies on WhatsApp with best bulk pricing, GST invoice and delivery timeline.</p>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="wrap samples-grid">
+      <form class="panel" id="quote-form" novalidate>
+        <input type="hidden" name="projectType" value="Residential">
+        <span class="eyebrow">Project Information</span>
+        <h2 style="margin-bottom:16px">About the project</h2>
+        <div class="field" style="margin-bottom:18px"><span class="flabel">Project Type</span>
+          <div class="seg" id="q-type"><button type="button" class="on">Residential</button><button type="button">Commercial</button><button type="button">Contractor</button><button type="button">Builder</button></div>
+        </div>
+        <div class="form-grid" style="margin-bottom:30px">
+          <div class="field"><label for="q-loc">Project Location <span class="req">*</span></label><input class="input" id="q-loc" name="location" required placeholder="e.g. Sector 62, Noida"><span class="err">Please enter the project location.</span></div>
+          <div class="field"><label for="q-area">Approximate Area</label><div class="input-group has-suf"><input class="input num" id="q-area" name="area" inputmode="decimal" placeholder="e.g. 4500"><span class="suf">sq.ft</span></div></div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px">
+          <div><span class="eyebrow">Required Products</span><h2>What do you need?</h2></div>
+          <button class="link-arrow terra" type="button" id="q-cart">Import from cart</button>
+        </div>
+        <div id="q-rows"></div>
+        <button class="btn btn-sm" type="button" id="q-add" style="background:var(--sand-2)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v10M3 8h10"/></svg> Add another product</button>
+        <div class="field" style="margin:18px 0 30px"><label for="q-extra">Additional products or notes</label><textarea class="textarea" id="q-extra" name="extra" placeholder="Other sizes, finishes, skirting, steps & risers, timelines…"></textarea></div>
+
+        <span class="eyebrow">Contact Details</span>
+        <h2 style="margin:6px 0 16px">Where should we send the quote?</h2>
+        <div id="q-fields"></div>
+        <button class="btn btn-wa btn-block" type="submit" style="height:52px;margin-top:24px"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9Z"/></svg> Request Quotation on WhatsApp</button>
+        <details class="wa-preview" id="quote-preview"><summary><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6Z"/><circle cx="10" cy="10" r="2.5"/></svg> Preview WhatsApp message</summary><pre></pre></details>
+      </form>
+
+      <aside>
+        <div class="trade-card reveal" style="min-height:auto">
+          <span class="eyebrow">What the trade desk provides</span>
+          <h3>Built for projects, not baskets.</h3>
+          <ul class="pts">
+            <li>Best available bulk &amp; volume pricing</li>
+            <li>Single-batch quantity reservation</li>
+            <li>GST invoice within 24 hours</li>
+            <li>Site delivery across Delhi-NCR</li>
+            <li>Dry-lay approvals at our studio</li>
+            <li>Dedicated project coordinator</li>
+          </ul>
+          <button class="btn btn-ghost-light btn-block" data-trade>Register Trade Account</button>
+        </div>
+        <div class="side-card reveal">
+          <span class="eyebrow">Prefer to talk?</span>
+          <h3>Visit the studio</h3>
+          <p class="small muted" data-address></p>
+          <div class="btn-row" style="margin-top:12px"><a class="btn btn-dark btn-sm" href="#" data-directions>Directions</a><a class="btn btn-line btn-sm" data-tel>Call</a></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/textures.js"></script>
+<script src="assets/js/whatsapp.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop All Surfaces — D.Tiles Studio</title>
+<meta name="description" content="Shop curated floor tiles, wall tiles, marble-look slabs and sanitaryware at D.Tiles Studio, Indirapuram. Filter by finish, size, colour and room.">
+<meta name="theme-color" content="#FAF7F2">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="collection" data-nav="collection">
+<main id="main">
+
+  <section class="page-head">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="collection.html">Shop</a><span class="sep">/</span><span class="cur" id="crumb-cur">All Surfaces</span></nav>
+      <div class="ph-grid">
+        <div class="reveal">
+          <span class="eyebrow terra" id="coll-eyebrow"></span>
+          <h1 id="coll-title">All Surfaces</h1>
+          <p class="lead" id="coll-desc"></p>
+          <div class="feat">
+            <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 2.5 16 5v5c0 3.6-2.6 6.5-6 7.5-3.4-1-6-3.9-6-7.5V5l6-2.5Z"/><path d="m7.5 10 1.8 1.8 3.4-3.6"/></svg>High Wear Vitrification</span>
+            <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 5h14M6 10h8M8.5 15h3"/></svg>Honed &amp; R10 Slip-Safe</span>
+            <span><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1.5 5h10v8h-10zM11.5 8h3.5l3 3v2h-6.5"/><circle cx="5" cy="14.5" r="1.5"/><circle cx="14.5" cy="14.5" r="1.5"/></svg>NCR Direct Dispatch</span>
+          </div>
+        </div>
+        <div class="ph-visual reveal" id="coll-visual"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="applied" id="applied-bar">
+    <div class="wrap">
+      <div id="applied-chips" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center"></div>
+      <span class="count" id="result-count"></span>
+      <select class="select sort-select" data-sort aria-label="Sort">
+        <option value="rel">Sort: Architectural Relevance</option>
+        <option value="lo">Price: Low to High</option>
+        <option value="hi">Price: High to Low</option>
+        <option value="az">Name: A – Z</option>
+        <option value="stock">In Stock First</option>
+      </select>
+    </div>
+  </div>
+
+  <section class="section-sm">
+    <div class="wrap">
+      <div class="listing">
+        <aside class="filters" id="filters" aria-label="Filters"></aside>
+        <div>
+          <div class="listing-tools"><button class="btn btn-line btn-sm" data-open-filters>Filters <span id="filter-count"></span></button></div>
+          <div class="prod-grid cols-3" id="grid"></div>
+          <nav class="pager" id="pager" aria-label="Pagination"></nav>
+          <div class="custom-cta reveal">
+            <span class="mono">A</span>
+            <div><h4>Looking for a custom project quantity or specific dimension?</h4><p>Direct kiln reservations, volume trade margins, and same-day Indirapuram warehouse viewing.</p></div>
+            <div class="btn-row"><button class="btn btn-dark btn-sm" data-visit>Showroom Visit</button><a class="btn btn-line btn-sm" href="quote.html">Trade Desk</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/textures.js"></script>
+<script src="assets/js/whatsapp.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

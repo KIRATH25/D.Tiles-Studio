@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tile Quantity Calculator — D.Tiles Studio</title>
+<meta name="description" content="Calculate exactly how many boxes of tiles you need, including wastage, and send the requirement to D.Tiles Studio on WhatsApp for a quotation.">
+<meta name="theme-color" content="#FAF7F2">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="calculator" data-nav="calculator">
+<main id="main">
+  <section class="page-title">
+    <div class="wrap">
+      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><a href="shop.html">Studio Services</a><span class="sep">/</span><span class="cur">Tile Quantity Calculator</span></nav>
+      <span class="eyebrow terra"><span class="dash"></span>Architectural Utility</span>
+      <h1>Tile Quantity <em class="it">Calculator</em></h1>
+      <p class="lead">Measure once, order right. Enter your room, choose a surface and we'll calculate boxes, wastage and cost — then send the full requirement to our studio on WhatsApp.</p>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="wrap calc-grid">
+      <form class="panel" id="calc-form" novalidate onsubmit="return false">
+        <input type="hidden" name="projectType" value="Home Renovation">
+        <input type="hidden" name="wastage" value="10">
+
+        <span class="eyebrow">Step 1 • Project</span>
+        <h2 style="margin-bottom:16px">Tell us about the space</h2>
+        <div class="field" style="margin-bottom:18px"><span class="flabel">Project Type</span>
+          <div class="seg" id="ptype-seg"><button type="button" class="on">Home Renovation</button><button type="button">New Construction</button><button type="button">Commercial</button></div>
+        </div>
+        <div class="form-grid" style="margin-bottom:28px">
+          <div class="field full"><label for="c-room">Room / Area</label>
+            <select class="select" id="c-room" name="room">
+              <option>Living Room</option><option>Bedroom</option><option>Bathroom</option><option>Kitchen</option><option>Dining Room</option><option>Foyer / Passage</option><option>Balcony / Terrace</option><option>Outdoor / Elevation</option><option>Office / Commercial</option>
+            </select>
+          </div>
+        </div>
+
+        <span class="eyebrow">Step 2 • Measurements</span>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 16px">
+          <h2>Room dimensions</h2>
+          <div class="seg" id="unit-seg" aria-label="Units"><button type="button" data-unit="ft" class="on">Feet</button><button type="button" data-unit="m">Metres</button></div>
+        </div>
+        <div class="form-grid" style="margin-bottom:18px">
+          <div class="field"><label for="c-l">Length <span class="req">*</span></label><div class="input-group has-suf"><input class="input num" id="c-l" name="length" inputmode="decimal" required data-type="number" placeholder="e.g. 15"><span class="suf" data-unit-suf>ft</span></div><span class="err">Enter the room length.</span></div>
+          <div class="field"><label for="c-w">Width <span class="req">*</span></label><div class="input-group has-suf"><input class="input num" id="c-w" name="width" inputmode="decimal" required data-type="number" placeholder="e.g. 12"><span class="suf" data-unit-suf>ft</span></div><span class="err">Enter the room width.</span></div>
+        </div>
+        <div class="field" style="margin-bottom:28px"><span class="flabel">Additional Wastage</span>
+          <div class="seg" id="waste-seg"><button type="button" data-w="5">5% • Straight, few cuts</button><button type="button" data-w="10" class="on">10% • Standard</button><button type="button" data-w="15">15% • Diagonal</button><button type="button" data-w="20">20% • Herringbone</button></div>
+        </div>
+
+        <span class="eyebrow">Step 3 • Surface</span>
+        <h2 style="margin:6px 0 16px">Choose your tile</h2>
+        <div class="field"><label for="c-sku">Selected Product</label><select class="select" id="c-sku" name="sku"></select></div>
+        <div class="calc-prod" id="calc-prod"></div>
+
+        <div class="form-grid" style="margin-top:28px">
+          <div class="field full"><label for="c-name">Your Name <span class="req">*</span></label><input class="input" id="c-name" name="name" required placeholder="So the studio knows who's asking" autocomplete="name"><span class="err">Please enter your name.</span></div>
+        </div>
+      </form>
+
+      <aside class="calc-result" aria-live="polite">
+        <span class="eyebrow">Your requirement</span>
+        <h3>Estimated order</h3>
+        <div class="big"><b class="num" id="r-boxes">0</b><span>boxes required</span></div>
+        <div class="lines">
+          <div><span>Total area</span><b class="num" id="r-area">—</b></div>
+          <div><span>Required coverage (incl. wastage)</span><b class="num" id="r-req">—</b></div>
+          <div><span>Actual coverage from boxes</span><b class="num" id="r-act">—</b></div>
+          <div><span>Tiles (pieces)</span><b class="num" id="r-pcs">—</b></div>
+          <div><span>Price per box</span><b class="num" id="r-ppb">—</b></div>
+          <div class="total"><span>Estimated product total</span><b class="num" id="r-total">—</b></div>
+          <div><span>Incl. GST (18%) approx.</span><b class="num" id="r-gst">—</b></div>
+        </div>
+        <button class="btn btn-wa btn-block" id="calc-send" type="button" style="height:52px"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2Zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9Z"/></svg> Send Requirement on WhatsApp</button>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+          <button class="btn btn-ghost-light" id="calc-cart" type="button">Add to Cart</button>
+          <button class="btn btn-light" id="calc-buy" type="button">Buy Now</button>
+        </div>
+        <details class="wa-preview" id="calc-preview" style="color:#E9E2D8"><summary style="color:rgba(233,226,216,.7)"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6Z"/><circle cx="10" cy="10" r="2.5"/></svg> Preview WhatsApp message</summary><pre></pre></details>
+        <p class="note">Estimates only. Final quantity is confirmed by the studio after reviewing your layout.</p>
+      </aside>
+    </div>
+  </section>
+</main>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/textures.js"></script>
+<script src="assets/js/whatsapp.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

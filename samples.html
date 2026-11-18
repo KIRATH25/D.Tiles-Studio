@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Physical Material Swatches — D.Tiles Studio</title>
+<meta name="description" content="Order physical tile swatches from D.Tiles Studio. First three swatches complimentary, delivered across NCR or collected from our Indirapuram showroom.">
+<meta name="theme-color" content="#FAF7F2">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="samples" data-nav="samples">
+<main id="main">
+  <section class="section-sm" style="padding-top:30px">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:40px">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Studio Atelier</a><span class="sep">/</span><span class="cur">Physical Material Swatches</span></nav>
+        <span class="pill-note" style="background:var(--sand-2);border-color:var(--sand-2)"><i style="width:6px;height:6px;border-radius:50%;background:var(--terracotta)"></i>Dispatch window: 24–48 hours</span>
+      </div>
+
+      <div class="samples-grid">
+        <div>
+          <div class="reveal" style="margin-bottom:30px">
+            <span class="eyebrow terra">Tactile Studio Protocol • Batch Samples</span>
+            <h1 style="margin:14px 0 14px">Some things are better<br><em class="it-terra">experienced in person.</em></h1>
+            <p class="serif" style="font-size:20px;color:var(--ink)">See the texture. Feel the finish. Understand how it looks in your own light.</p>
+          </div>
+
+          <div class="panel reveal">
+            <div class="phead">
+              <div><span class="eyebrow">Curated Box Selection</span><h2 id="sw-count">Your Selected Swatches</h2></div>
+              <span class="pill-note" id="sw-free"></span>
+            </div>
+            <div id="swatch-list"></div>
+            <div class="add-swatch">
+              <button class="btn btn-sm" type="button" id="sw-add" style="background:var(--sand-2)"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3v10M3 8h10"/></svg> Add another tile swatch <span id="sw-add-n"></span></button>
+              <span class="small muted">Maximum 5 material swatches per custom studio box.</span>
+            </div>
+            <div class="info-note"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="10" cy="10" r="7.5"/><path d="M10 9v5M10 6.2v.1"/></svg><span><b>Complimentary Tier:</b> First 3 material swatches complimentary for homeowner &amp; architect projects. Studio dispatch fee: <b>₹150</b> or <b>Free Showroom Pick-up</b> at Indirapuram Studio. Swatches 4–5: ₹75 each.</span></div>
+          </div>
+
+          <form class="panel reveal" id="sample-form" novalidate>
+            <span class="eyebrow terra">Step 2 • Destination &amp; Client Details</span>
+            <h2>Where should we dispatch this set?</h2>
+            <p class="small muted" style="margin:6px 0 22px">All shipments are bubble-cushioned in recycled pulp cartons and accompanied by technical batch spec sheets.</p>
+            <div class="choice-grid" style="margin-bottom:24px">
+              <label class="choice"><input type="radio" name="option" value="Home Delivery" checked><span class="dot"></span><span><b>Deliver to my address</b><span>Courier dispatch across NCR &amp; Pan-India (₹150 standard flat fee)</span></span></label>
+              <label class="choice"><input type="radio" name="option" value="Showroom Collection"><span class="dot"></span><span><b>Arrange Showroom Collection</b><span>Indirapuram Studio, Ghaziabad (Complimentary / ₹0)</span></span></label>
+            </div>
+            <div id="sample-fields"></div>
+            <div class="summary-box">
+              <div><div class="k">Box Order Summary</div><div class="v" id="sum-items"></div></div>
+              <div class="amt"><span class="k">Estimated Dispatch Due</span><b class="num" id="sum-fee">₹150</b><small>GST invoicing included</small></div>
+            </div>
+            <button class="btn btn-dark btn-block" type="submit" style="height:52px">Request My Samples on WhatsApp <svg class="arrow" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></button>
+            <details class="wa-preview" id="sample-preview"><summary><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6Z"/><circle cx="10" cy="10" r="2.5"/></svg> Preview WhatsApp message</summary><pre></pre></details>
+            <p class="secure-note"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 2.5 16 5v5c0 3.6-2.6 6.5-6 7.5-3.4-1-6-3.9-6-7.5V5l6-2.5Z"/><path d="m7.5 10 1.8 1.8 3.4-3.6"/></svg><span>Sample availability and delivery timelines will be confirmed via WhatsApp/Phone by our Indirapuram studio team. No unauthorised charges.</span></p>
+          </form>
+        </div>
+
+        <aside>
+          <div class="side-card reveal">
+            <span class="eyebrow" style="display:flex;gap:10px"><svg style="width:16px;height:16px;color:var(--terracotta)" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m2.5 13.5 11-11 4 4-11 11-4-4Z"/><path d="m6 10 1.5 1.5M8.5 7.5 10 9M11 5l1.5 1.5"/></svg>Authentic Precision Cuts</span>
+            <p class="small muted" style="margin:10px 0 0">Every cut sample measures 150×150mm or 100×200mm, cut directly from production batches so you can inspect depth of glaze, slip resistance, and true tonal warmth under natural day and warm evening light.</p>
+          </div>
+          <div class="side-card reveal">
+            <span class="eyebrow">Architectural Field Notes</span>
+            <h3>Why Test Samples In Situ?</h3>
+            <p class="serif" style="font-size:18px;line-height:1.4;color:var(--ink)">A studio surface never lives in isolation. It breathes alongside your orientation, ceiling heights, and cabinetry.</p>
+            <div class="tip"><b><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="10" cy="10" r="3.5"/><path d="M10 1.5v2M10 16.5v2M1.5 10h2M16.5 10h2M4 4l1.4 1.4M14.6 14.6 16 16M4 16l1.4-1.4M14.6 5.4 16 4"/></svg>1. Daylight Orientation</b><strong style="color:var(--charcoal);font-weight:600">North-facing rooms</strong> receive cooler, blue-tinted illumination where cream stones can flatten. <strong style="color:var(--charcoal);font-weight:600">South/West light</strong> intensifies warm terracotta and travertine veining dramatically around late afternoon.</div>
+            <div class="tip"><b><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M7.5 15h5M8 17.5h4M10 2.5a5 5 0 0 0-3 9c.6.5 1 1.2 1 2v.5h4v-.5c0-.8.4-1.5 1-2a5 5 0 0 0-3-9Z"/></svg>2. 3000K vs. 4000K Lighting</b>Commercial spotlights often distort micro-crystalline depth. Place your swatches flat under your intended cove or downlight temperature to witness the genuine slip finish and gloss reflection.</div>
+            <div class="tip"><b><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m10 3 7.5 4L10 11 2.5 7 10 3Z"/><path d="m2.5 10.5 7.5 4 7.5-4M2.5 14l7.5 4 7.5-4"/></svg>3. Veneer &amp; Paint Interplay</b>Hold the tile directly beside your scheduled oak veneers, brass hardware, or wall emulsion swatches to confirm mineral tone balance without synthetic surprises.</div>
+            <div class="ph"><img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?auto=format&fit=crop&w=800&q=78" alt="Studio still life of material samples" loading="lazy"></div>
+          </div>
+          <div class="side-card reveal">
+            <span class="eyebrow">Need full slabs?</span>
+            <h3>Visit Indirapuram Studio</h3>
+            <p class="small muted">While swatches test edge nuances, our gallery showcases continuous bookmatched 1200×2400mm slabs under calibrated full-spectrum lighting.</p>
+            <a class="link-arrow terra" href="#" data-visit>Schedule showroom walkthrough <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 8h12M9.5 3.5 14 8l-4.5 4.5"/></svg></a>
+          </div>
+          <div class="side-card reveal">
+            <span class="eyebrow">What arrives in your carton</span>
+            <ul>
+              <li>Selected 150×150mm / 100×200mm authentic batch swatches</li>
+              <li>Slip resistance rating (R9 / R10 / R11) documentation</li>
+              <li>Suggested grout shade palette &amp; joint thickness guide</li>
+              <li>Pre-addressed returns bag (if you choose to return after decision)</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/textures.js"></script>
+<script src="assets/js/whatsapp.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
